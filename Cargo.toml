@@ -1,0 +1,33 @@
+[package]
+name = "rk_max_people"
+version = "0.1.0"
+edition = "2021"
+
+
+[dependencies]
+env_logger = "0.11.5"
+actix-web = "4.4.1"
+uuid = { version = "1.7.0", features = ["v4", "fast-rng", "macro-diagnostics"] }
+serde = { version = "1", features = ["derive"] }
+dotenvy = "0.15.7"
+dotenv = "0.15.0"
+tokio-postgres = {version="0.7.2", features=["with-uuid-0_8"]}
+tokio = { version = "^1.35", features = ["rt-multi-thread", "macros"] }
+serde_json = "1.0.113"
+async-trait = "0.1.77"
+once_cell = "1.19.0"
+futures = "0.3.30"
+validator = { version = "0.19.0", features = ["derive"] }
+bcrypt = "0.16.0"
+chrono = "0.4.38"
+jsonwebtoken = "9.3.0"
+actix-cors = "0.7.0"
+lapin = "2.5.0"
+tokio-amqp = "2.0.0"
+futures-util = "0.3"
+tokio-stream = "0.1"
+#proc-macro2 = "1.0.92"
+
+
+[dev-dependencies]
+mockall = "0.13.1"
