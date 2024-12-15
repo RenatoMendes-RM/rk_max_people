@@ -10,7 +10,11 @@ mod container;
 
 #[actix_web::main]
 async fn main() -> std::io::Result<()> {
-    std::env::set_var("RUST_LOG", "info");
+
+    unsafe {
+        std::env::set_var("RUST_LOG", "info");
+    }
+
     env_logger::init();
 
     HttpServer::new(move || {
